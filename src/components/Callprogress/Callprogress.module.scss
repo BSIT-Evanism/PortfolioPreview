@@ -1,0 +1,60 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 80vh;
+
+    .button {
+        height: 30%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       
+
+        .notice {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            height: 40%;
+            border-radius: 50px;
+            gap: 30px;
+            
+            color: #f8f0e5;
+            background: #102c5772;
+
+            .ping {
+                width: 20px;
+                height: 20px;
+                border-radius: 30px;
+                background: lime;
+            }
+
+            h1 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5rem;
+
+                @media (max-width: 768px) {
+                    font-size: 0.8rem;
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
+    }
+
+    .work {
+        height: 50%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+}

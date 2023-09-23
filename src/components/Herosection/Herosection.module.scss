@@ -13,7 +13,7 @@
 
     .top {
       z-index: 10;
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       background: #f8f0e5;
       position: absolute;
@@ -141,7 +141,7 @@
           text-transform: uppercase;
           font-weight: bold;
           position: absolute;
-          font-size: 8rem;
+          font-size: clamp(5rem, 7vw, 8rem);
 
           &:nth-child(1) {
             color: transparent;
@@ -221,7 +221,7 @@
 .scrollbar {
   position: fixed;
   top: 40vh;
-  left: 2vw;
+  right: 2vw;
   z-index: 100;
   width: 10px;
   border-radius: 10px;
