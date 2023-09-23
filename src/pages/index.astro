@@ -76,4 +76,12 @@ import Herosection from "../components/Herosection/Herosection";
   #__next {
     isolation: isolate;
   }
+
+  html {
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 </style>
