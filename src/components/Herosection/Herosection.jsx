@@ -2,16 +2,33 @@ import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import styles from "./Herosection.module.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Marquee from "react-fast-marquee";
+import { Octokit } from "@octokit/rest";
+import Gitcard from "../Gitcard/Gitcard";
 
 
 function Herosection() {
   const { scrollYProgress } = useScroll();
+  const [repos, setRepos] = useState([]);
   const springY = useSpring(scrollYProgress);
   const coords = useTransform(springY, [0, 1], [0, 200]);
   const opac = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const opaci = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
   const [time, setTime] = useState("00:00:00");
   const [hover, setHover] = useState(false);
+
+  const octokit = new Octokit({
+    auth: import.meta.env.GITHUB_TOKEN
+  });
+
+  useEffect(() => {
+    octokit.request('GET /users/{username}/repos', {
+      username: 'BSIT-Evanism'
+    }).then(({ data }) => {
+      setRepos(data);
+    console.log(repos);
+    });
+  }, [])
+
 
 
   useLayoutEffect(() => {
@@ -62,16 +79,28 @@ function Herosection() {
               >Available for work</motion.p>
             </motion.div>
             <div className={styles.box}>
+              
+              <div className={styles.innerBox}>
+                {/* <Gitcard /> */}
+                {repos.map((repo) => (
+                  <Gitcard
+                    key={repo.id} 
+                    repoName={repo.name ? repo.name : "No name"} 
+                    repoDesc={repo.description ? repo.description : "No description"} 
+                    repoUrl={repo.html_url ? repo.html_url : "No url"}
+                    repoLang={repo.language ? repo.language : "No language"}
+                    repoStars={repo.stargazers_count ? repo.stargazers_count : "No stars"}
+                    repoForks={repo.forks ? repo.forks : "No forks"}
+                    repoLicense={repo.license ? repo.license : "No license"}
+                    repoUpdated={repo.updated_at ? repo.updated_at : "No updated"}
+                    />
+                ))}
+              </div>
               <Marquee
-                className={styles.marquee}
-              >
-                <p>Legazpi City, Albay</p>
-              </Marquee>
-              <Marquee
-                className={styles.marquee}
+                className={styles.marquee__bottom}
               // gradient={true}
               >
-                <p>Local time: {time}</p>
+                <p>Local time: {time}  &emsp; Legazpi City, Albay</p>
               </Marquee>
             </div>
             <div id="box" className={styles.center}>

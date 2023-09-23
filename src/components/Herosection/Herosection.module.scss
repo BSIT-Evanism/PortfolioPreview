@@ -92,16 +92,48 @@
         left: 10%;
         top: 20%;
         position: absolute;
-
-        .marquee {
-          border-top: 1px solid #102c57;
-          border-bottom: 1px solid #102c57;
-
-          &:nth-child(2) {
-            position: absolute;
-            bottom: 0;
+        border: 5px solid #102c57;
+        border-radius: 20px;
+        overflow: hidden;
+        
+        .innerBox {
+          background: #f8f0e5;
+          width: 100%;
+          height: 90%;
+          position: absolute;
+          top: 0;
+          overflow-y: scroll;
+          
+          &::-webkit-scrollbar {
+            width: 0px;
           }
         }
+        
+
+        .marquee {
+         
+
+          &__top {
+            border-bottom: 5px solid #102c57;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            background: #f8f0e5;
+          }
+          
+          
+          &__bottom {
+            border-top: 5px solid #102c57;
+            position: absolute;
+            bottom: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            background: #f8f0e5;    
+          }
+        }
+
+        
       }
 
       .center {
