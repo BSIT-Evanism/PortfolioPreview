@@ -8,7 +8,7 @@
 
     .button {
         height: 30%;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,7 +19,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 70%;
+            width: 80%;
             height: 40%;
             border-radius: 50px;
             gap: 30px;
@@ -31,7 +31,7 @@
 
             @media (max-width: 768px) {
                 gap: 10px;
-                
+
             }
 
             .ping {
@@ -61,7 +61,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
+
                 h1 {
                     font-size: 1rem;
 
@@ -79,7 +79,7 @@
 
     .work {
         height: 50%;
-        width: 90%;
+        width: 100%;
         display: flex;
 
         .textwrap {
@@ -91,57 +91,57 @@
                 text-transform: uppercase;
                 font-weight: bold;
                 position: absolute;
-                font-size: 6rem;
+                font-size: 7rem;
                 box-sizing: content-box;
                 word-wrap: break-word;
-    
-                @media  (max-width: 768px) {
-                    font-size: 3rem;
+
+                @media (max-width: 768px) {
+                    font-size: 5.5rem;
                 }
-    
+
                 @media screen and (min-width: 1720px) {
                     font-size: 8rem;
                 }
-                    
-               
-                    
-              
-    
+
+
+
+
+
                 &:nth-child(1) {
                     color: transparent;
                     -webkit-text-stroke: 1px #102c57;
                 }
-    
+
                 &:nth-child(2) {
                     color: #102c57;
                     animation: clipp 30s ease infinite alternate;
                 }
-    
+
                 @keyframes clipp {
                     0% {
                         clip-path: circle(23.0% at 11% 89%);
                     }
-    
+
                     20% {
                         clip-path: circle(10.0% at 37% 80%);
                     }
-    
+
                     50% {
                         clip-path: circle(50.0% at 68% 95%);
                     }
-    
+
                     70% {
                         clip-path: circle(80.0% at 75% 59%);
-    
+
                     }
-    
+
                     100% {
                         clip-path: circle(23.0% at 50% 62%);
                     }
                 }
             }
         }
-        
+
     }
 }
 

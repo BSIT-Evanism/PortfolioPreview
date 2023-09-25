@@ -8,17 +8,22 @@ function Callprogress() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.button}>
-        <div 
+        <div
           className={styles.notice}
           onMouseEnter={() => setToggle(true)}
           onMouseLeave={() => setToggle(false)}
-          >
+        >
           <div className={styles.ping}></div>
-          <h1>Available for work</h1>
-          <motion.div 
+          <motion.h1
+            animate={{ y: toggle ? -100 : 0 }}
+            transition={{ duration: 0.5, ease: "backOut" }}
+          >Available for work</motion.h1>
+          <motion.div
             className={styles.callAction}
-            animate={{y: toggle ? 0 : 100}}
-            >
+            animate={{ y: toggle ? 0 : 100 }}
+            transition={{ duration: 0.5, ease: "backOut" }}
+
+          >
             <h1>Contact me</h1>
           </motion.div>
         </div>

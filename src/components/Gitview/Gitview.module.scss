@@ -10,7 +10,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 70%;
+        width: 80%;
         height: 90%;
         border-radius: 30px;
         border: 5px solid #102c57;
@@ -19,7 +19,16 @@
         .marquee {
             position: absolute;
             bottom: 0;
-            
+            width: 100%;
+            border-top: 5px solid #102c57;
+
+            .marqueeText {
+                width: 100%;
+                height: 3rem;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+
         }
 
     }
