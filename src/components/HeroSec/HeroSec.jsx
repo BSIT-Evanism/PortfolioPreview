@@ -17,10 +17,13 @@ function HeroSec() {
           <Callprogress />
         </div>
       </div>
-        <div className={styles.midSection}>
-          <Projects />
-          <div className={styles.spacer} />
-        </div>
+      <div className={styles.midSection}>
+        <Projects />
+        <div className={styles.spacer} />
+      </div>
+      <div className={styles.blogs}>
+
+      </div>
     </>
   )
 }
