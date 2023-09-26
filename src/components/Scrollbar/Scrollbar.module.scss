@@ -1,0 +1,24 @@
+.scrollbar {
+    position: fixed;
+    top: 40vh;
+    right: 2vw;
+    z-index: 100;
+    width: 10px;
+    border-radius: 10px;
+    // border: 0.5px solid #f8f0e5;
+    height: 300px;
+    background: #102c579a;
+    overflow: hidden;
+    border-radius: 100px;
+
+    .scroller {
+        position: relative;
+        left: -45px;
+        border-radius: 100px;
+        height: 100px;
+        width: 100px;
+        background: #102c57;
+        // background: red;
+    }
+
+}
