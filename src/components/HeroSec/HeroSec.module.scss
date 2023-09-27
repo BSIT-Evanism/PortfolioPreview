@@ -16,12 +16,19 @@
 
 .midSection {
     z-index: 0;
-    height: 200vh;
+    height: 300vh;
     margin-top: -100vh;
+    margin-bottom: -100vh;
 
-
-    .spacer {
-        height: 100vh;
-        z-index: -10;
+    @media screen and (max-width: 768px) {
+        height: 400vh;
+        margin-top: -100vh;
+        margin-bottom: -100vh;
     }
+}
+
+.blogs {
+    height: 100vh;
+    z-index: 10;
+    background: #102c57;
 }

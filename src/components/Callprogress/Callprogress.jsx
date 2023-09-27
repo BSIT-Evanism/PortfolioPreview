@@ -13,7 +13,9 @@ function Callprogress() {
           onMouseEnter={() => setToggle(true)}
           onMouseLeave={() => setToggle(false)}
         >
-          <div className={styles.ping}></div>
+          <div className={styles.ping}>
+            <div className={styles.static} />
+          </div>
           <motion.h1
             animate={{ y: toggle ? -100 : 0 }}
             transition={{ duration: 0.5, ease: "backOut" }}
