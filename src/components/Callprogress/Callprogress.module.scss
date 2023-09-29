@@ -115,6 +115,7 @@
                 font-size: 7rem;
                 box-sizing: content-box;
                 word-wrap: break-word;
+                width: 50rem;
 
                 @media (max-width: 768px) {
                     font-size: 5.5rem;
@@ -123,9 +124,6 @@
                 @media screen and (min-width: 1720px) {
                     font-size: 8rem;
                 }
-
-
-
 
 
                 &:nth-child(1) {
