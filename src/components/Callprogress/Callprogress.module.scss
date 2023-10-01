@@ -117,7 +117,7 @@
                 word-wrap: break-word;
                 width: 50rem;
 
-                @media (max-width: 768px) {
+                @media (max-height: 768px) {
                     font-size: 5.5rem;
                 }
 

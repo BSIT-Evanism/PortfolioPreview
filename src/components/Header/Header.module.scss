@@ -10,10 +10,13 @@
     margin-bottom: 2rem;
 
     .rollerwrapper {
-        width: fit-content;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: fixed;
+        top: 3vh;
+        
 
         h1 {
             font-size: clamp(2.5rem, 5vw, 2.5rem);
