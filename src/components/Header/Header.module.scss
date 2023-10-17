@@ -5,7 +5,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 1rem;
-    
+
     width: 100%;
     margin-bottom: 2rem;
 
@@ -14,9 +14,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: fixed;
+        // position: fixed;
         top: 3vh;
-        
+
 
         h1 {
             font-size: clamp(2.5rem, 5vw, 2.5rem);
@@ -24,7 +24,7 @@
             text-transform: uppercase;
         }
 
-     
+
 
         img {
             position: absolute;
@@ -40,7 +40,7 @@
     }
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
     .wrapper {
         margin-bottom: 3rem;
         // background: red;
@@ -52,4 +52,3 @@
         }
     }
 }
-    
