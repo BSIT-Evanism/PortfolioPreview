@@ -16,18 +16,18 @@ function Herosection() {
   const [time, setTime] = useState("00:00:00");
   const [hover, setHover] = useState(false);
 
-  const octokit = new Octokit({
-    auth: import.meta.env.GITHUB_TOKEN
-  });
+  // const octokit = new Octokit({
+  //   auth: import.meta.env.GITHUB_TOKEN
+  // });
 
-  useEffect(() => {
-    octokit.request('GET /users/{username}/repos', {
-      username: 'BSIT-Evanism'
-    }).then(({ data }) => {
-      setRepos(data);
-    console.log(repos);
-    });
-  }, [])
+  // useEffect(() => {
+  //   octokit.request('GET /users/{username}/repos', {
+  //     username: 'BSIT-Evanism'
+  //   }).then(({ data }) => {
+  //     setRepos(data);
+  //   console.log(repos);
+  //   });
+  // }, [])
 
 
 
@@ -81,7 +81,7 @@ function Herosection() {
             <div className={styles.box}>
               
               <div className={styles.innerBox}>
-                {/* <Gitcard /> */}
+                <Gitcard />
                 {repos.map((repo) => (
                   <Gitcard
                     key={repo.id} 
